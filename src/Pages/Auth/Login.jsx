@@ -5,6 +5,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { FallingLines } from "react-loader-spinner";
 import { Toaster, toast } from "sonner";
+import PSI_Logo from "../../../public/logos/PSI_Logo.png";
+import LoginParticles from "../../Components/LoginParticles";
+import LoginGlobe from "../../Components/LoginGlobe";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -38,24 +41,26 @@ export default function Login() {
   });
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 py-2 px-4 sm:px-6 lg:px-8 h-screen overflow-hidden">
+    
+    <div className="relative flex items-center justify-center bg-gray-950  py-2 px-4 sm:px-6 lg:px-8 h-screen overflow-hidden">
+      <LoginParticles />
       <Toaster richColors />
-      <div className="flex flex-col md:flex-row w-full sm:max-w-3xl md:max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="relative z-10 flex flex-col md:flex-row w-full sm:max-w-3xl md:max-w-4xl bg-black border border-lime-600 shadow-lg rounded-lg overflow-hidden">
         {/* Left Section */}
         <div className="flex flex-col justify-center w-full md:w-1/2 p-8">
           <div className="text-center">
-            <img
-              className="mx-auto w-22 h-22 md:w-48"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW57_AgjjFvryihCz2Rrpo0btBvOIbw12Ltg&s"
-              alt="logo"
-            />
-            <h4 className="mb-4 text-xl font-semibold text-gray-800">
-              Welcome to Book Portal
-            </h4>
+             <img
+                            src={PSI_Logo}
+                            alt="PSI Logo"
+                            className="mx-auto w-22 h-22 md:w-48"
+                          />
+            {/* <h4 className="mb-4 text-xl font-semibold text-gray-800">
+              Pakistan Subsriber Info
+            </h4> */}
           </div>
 
           <form onSubmit={LoginForm.handleSubmit} className="space-y-2">
-            <p className="text-gray-600 text-sm text-center">
+            <p className="text-gray-400 text-sm text-center">
               Please login to your account
             </p>
 
@@ -84,7 +89,7 @@ export default function Login() {
               <div className="flex justify-center items-center mt-4">
                 {" "}
                 <FallingLines
-                  color="#FF7B00"
+                  color="#4D7C0F"
                   width="50"
                   visible={true}
                   ariaLabel="falling-circles-loading"
@@ -98,26 +103,26 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full rounded-md bg-orange-500 text-white font-medium py-2 px-4 transition ${
+              className={`w-full rounded-md bg-lime-700 text-white font-medium py-2 px-4 transition ${
                 loading
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:bg-orange-600"
+                  : "hover:bg-lime-800"
               }`}
             >
               {loading ? "Logging in..." : "Log in"}
             </button>
 
             {/* Forgot Password */}
-            <a
+            {/* <a
               href="#!"
               className="block text-sm text-center text-gray-500 hover:underline"
             >
               Forgot password?
-            </a>
+            </a> */}
           </form>
 
           {/* Register Section */}
-          <div className="flex items-center justify-between mt-6">
+          {/* <div className="flex items-center justify-between mt-6">
             <p className="text-gray-600 text-sm">Don't have an account?</p>
             <button
               type="button"
@@ -125,11 +130,12 @@ export default function Login() {
             >
               <Link to="/signup"> Register</Link>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Section */}
-        <div className="hidden md:flex flex-col justify-center w-full md:w-1/2 bg-gradient-to-r from-orange-500 to-gray-500 text-white p-8">
+         
+        <div className="hidden md:flex flex-col justify-center w-full md:w-1/2 bg-gradient-to-r from-lime-700 to-gray-500 text-white p-8">
           <h4 className="text-2xl font-bold mb-4">
             We are more than just a Book company
           </h4>
@@ -138,6 +144,9 @@ export default function Login() {
             selling, and sharing books becomes effortless and enjoyable. Embrace
             a world of stories, knowledge, and possibilities.
           </p>
+          {/* <div className="w-full h-96">
+    <LoginGlobe />
+  </div> */}
         </div>
       </div>
     </div>

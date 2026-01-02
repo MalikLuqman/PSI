@@ -24,7 +24,6 @@ import {
   ChevronDownIcon,
 } from "../utils/icons";
 import React, { useState, useEffect, useRef } from "react";
-import LandingIndex from "../Pages/LandingPage/Index";
 import { HeroSection } from "../Components/HeroSection";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import CartSlideOver from "../Components/Cart/CartSlideOver";
@@ -125,7 +124,7 @@ export default function LayoutIndex() {
               </button>
             </div>
 
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+            {/* <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {navigation.pages.map((page) => (
                 <div key={page.name} className="flow-root">
                   <Link
@@ -142,26 +141,7 @@ export default function LayoutIndex() {
                   </Link>
                 </div>
               ))}
-            </div>
-
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              <div className="flow-root">
-                <Link
-                  to="/login"
-                  className="-m-2 block p-2 font-medium rounded-md text-white hover:bg-orange-500"
-                >
-                  Sign in
-                </Link>
-              </div>
-              <div className="flow-root">
-                <Link
-                  to="/signup"
-                  className="-m-2 block p-2 font-medium rounded-md text-white hover:bg-orange-500"
-                >
-                  Create account
-                </Link>
-              </div>
-            </div>
+            </div> */}
           </DialogPanel>
         </div>
       </Dialog>
@@ -170,11 +150,11 @@ export default function LayoutIndex() {
         {/* Top navigation */}
         <nav
           aria-label="Top"
-          className="relative z-10 bg-gray-900 backdrop-blur-xl backdrop-filter"
+          className="relative z-10 bg-white/70 backdrop-blur-xl backdrop-filter border-b border-gray-200"
         >
           <div className="md:ml-72 max-w-8xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center">
-              <button
+              {/* <button
                 type="button"
                 onClick={() => setOpen(true)}
                 className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
@@ -182,7 +162,7 @@ export default function LayoutIndex() {
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon aria-hidden="true" className="size-6" />
-              </button>
+              </button> */}
 
               {/* <div className="ml-4 flex lg:ml-0">
                 <Link to="/home">
@@ -193,8 +173,8 @@ export default function LayoutIndex() {
                 </Link>
               </div> */}
 
-              {/* Flyout menus */}
-              <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
+              {/* Top navbar array */}
+              {/* <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="flex h-full items-center space-x-2">
                   {navigation.pages.map((page) => (
                     <Link
@@ -211,46 +191,10 @@ export default function LayoutIndex() {
                     </Link>
                   ))}
                 </div>
-              </PopoverGroup>
+              </PopoverGroup> */}
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {/* <ShoppingCartOutlinedIcon
-                    className="block h-5 w-5 mt-1 text-orange-500 hover:text-orange-600"
-                    aria-hidden="true"
-                    onClick={openCartSlideOverHandler}
-                  /> */}
-                  {userLoggedIn && role_id == 2 && (
-                    <span className="mt-1 px-2 py-1 rounded-md text-white bg-orange-500 ring-1 ring-inset ring-white">
-                      Credits:{" "}
-                      {dataLoading ? (
-                        <span className="animate-pulse">Loading...</span>
-                      ) : (
-                        userData?.credit_value || "0"
-                      )}
-                    </span>
-                  )}
-                  {!userLoggedIn && (
-                    <div>
-                      {" "}
-                      <Link
-                        to="/login"
-                        className="relative text-sm font-medium text-white px-3 py-2 rounded-md hover:bg-orange-500"
-                      >
-                        Sign in
-                      </Link>
-                      <span
-                        aria-hidden="true"
-                        className="h-6 w-px bg-gray-200"
-                      />
-                      <Link
-                        to="/signup"
-                        className="relative text-sm font-medium text-white px-3 py-2 rounded-md hover:bg-orange-500"
-                      >
-                        Create account
-                      </Link>
-                    </div>
-                  )}
                   {userLoggedIn && (
                     <Menu as="div" className="relative">
                       <MenuButton className="-m-1.5 flex items-center p-1.5">
@@ -279,13 +223,13 @@ export default function LayoutIndex() {
                         <span className="hidden lg:flex lg:items-center">
                           <span
                             aria-hidden="true"
-                            className="ml-4 text-pretty font-semibold text-white"
+                            className="ml-4 text-pretty font-semibold text-black"
                           >
                             {user_name}
                           </span>
                           <ChevronDownIcon
                             aria-hidden="true"
-                            className="ml-2 size-5 text-gray-400"
+                            className="ml-2 size-5 text-black"
                           />
                         </span>
                       </MenuButton>
@@ -297,7 +241,7 @@ export default function LayoutIndex() {
                           <MenuItem key={item.name}>
                             <Link
                               to={item.href}
-                              className="block px-3 py-1 text-sm/6 text-gray-900 hover:text-orange-500  data-[focus]:bg-gray-50 data-[focus]:outline-none"
+                              className="block px-3 py-1 text-sm/6 text-gray-900 hover:text-lime-700  data-[focus]:bg-gray-50 data-[focus]:outline-none"
                             >
                               {item.name}
                             </Link>
@@ -305,8 +249,8 @@ export default function LayoutIndex() {
                         ))}
                         <div className="m-1.5">
                           <Button
-                            color="orange"
-                            className={"rounded-xl w-full"}
+                            // color="green"
+                            className={"rounded-xl w-full bg-lime-700 hover:bg-lime-600"}
                             onClick={async () => {
                               await auth.logout();
                               navigate("/login");
@@ -323,12 +267,6 @@ export default function LayoutIndex() {
             </div>
           </div>
         </nav>
-        {/* <CartSlideOver
-          isOpen={openCartSlideOver}
-          onClose={closeCartSlideOverHandler}
-          cartItems={cartData}
-          onRemoveItem={removeFromCart}
-        /> */}
       </header>
       <Outlet />
     </div>

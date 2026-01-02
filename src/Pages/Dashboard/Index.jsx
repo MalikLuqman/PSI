@@ -26,11 +26,10 @@ import {
   ShoppingCartOutlinedIcon,
   ArchiveBoxIcon,
 } from "../../utils/icons";
-import Header from "../../Components/Dashboard/Header";
 import SideNavbar from "../../Components/Dashboard/SideNavbar";
 import { useState, useEffect } from "react";
 import { Link, Outlet, useParams, useLocation } from "react-router-dom";
-import BookLogo from "../../../public/logos/BookLogo.png";
+import PSI_Logo from "../../../public/logos/PSI_Logo.png";
 //Side Menus Dashboard
 export default function DashboardIndex() {
   const role = localStorage.getItem("role_id");
@@ -135,7 +134,7 @@ export default function DashboardIndex() {
                 <div className=" m-0 p-0 flex">
                   <Link to="/home">
                     <img
-                      src={BookLogo}
+                      src={PSI_Logo}
                       alt="Book Logo"
                       className="h-[7rem] w-auto "
                     />
@@ -151,8 +150,8 @@ export default function DashboardIndex() {
                               to={item.href}
                               className={classNames(
                                 location.pathname === item.href
-                                  ? "bg-orange-500 text-white"
-                                  : "text-gray-300 hover:bg-orange-500 hover:text-white",
+                                  ? "bg-lime-700 text-white"
+                                  : "text-gray-300 hover:bg-lime-800 hover:text-white",
                                 "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
                               )}
                             >
@@ -166,18 +165,6 @@ export default function DashboardIndex() {
                         ))}
                       </ul>
                     </li>
-                    {/* <li className="mt-auto">
-                      <a
-                        href="#"
-                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-orange-500"
-                      >
-                        <Cog6ToothIcon
-                          aria-hidden="true"
-                          className="size-6 shrink-0"
-                        />
-                        Settings
-                      </a>
-                    </li> */}
                   </ul>
                 </nav>
               </div>
@@ -187,8 +174,10 @@ export default function DashboardIndex() {
 
         {/* Static sidebar for desktop */}
         <SideNavbar />
+
+        {/* uncomment below code if you want to open side menu in mobile view */}
         <div className="lg:pl-72">
-          <div className=" top-0 z-10 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+          {/* <div className=" top-0 z-10 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
@@ -202,8 +191,7 @@ export default function DashboardIndex() {
               aria-hidden="true"
               className="h-6 w-px bg-gray-900/10 lg:hidden"
             />
-            {/* <Header /> */}
-          </div>
+          </div> */}
 
           <main className="py-2">
             <div className="px-4 sm:px-6 lg:px-8">

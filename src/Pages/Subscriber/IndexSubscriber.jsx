@@ -27,9 +27,8 @@ import DispatchConfirmationModal from "../../Components/Dispatch/DispatchConfirm
 import functions from "../../utils/GlobalFunctions";
 import { useDropdownContext } from "../../DropdownProvider/DropdownProvider";
 import ChangeBookStatusModal from "../../Components/Books/ChangeBookStatusModal";
-import { UploadFile } from "@mui/icons-material";
 
-export default function IndexBooks() {
+export default function IndexSubscriber() {
   const role = parseInt(localStorage.getItem("role_id"));
   const user_id = localStorage.getItem("user_id");
   const dropDownValues = useDropdownContext();
