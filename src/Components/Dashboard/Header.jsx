@@ -72,7 +72,7 @@ const Header = () => {
               <MenuItem key={item.name}>
                 <Link
                   to={item.href}
-                  className="block px-3 py-1 text-sm/6 text-gray-900 hover:text-orange-500  data-[focus]:bg-gray-50 data-[focus]:outline-none"
+                  className="block px-3 py-1 text-sm/6 text-lime-600 hover:text-lime-500  data-[focus]:bg-gray-50 data-[focus]:outline-none"
                 >
                   {item.name}
                 </Link>
@@ -80,8 +80,8 @@ const Header = () => {
             ))}
             <div className="m-1.5">
               <Button
-                color="orange"
-                className={"rounded-xl w-full"}
+                color="green"
+                className={"rounded-xl w-full bg-lime-700 hover:bg-lime-600"}
                 onClick={async () => {
                   await auth.logout();
                   navigate("/login");

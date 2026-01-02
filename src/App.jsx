@@ -1,6 +1,6 @@
 import "./App.css";
 import LayoutIndex from "./Layout/Index";
-import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter, Navigate } from "react-router-dom";
 import Login from "./Pages/Auth/Login";
 import DashboardMain from "./Pages/Dashboard";
 import DashboardHome from "./Pages/Dashboard/DashboardHome";
@@ -19,8 +19,13 @@ function App() {
       <DropdownProvider>
         <HashRouter>
           <Routes>
+              {/* DEFAULT ROUTE */}
+          <Route path="/" element={<Navigate to="/login" replace />} />
+
             {/* Public Routes */}
             <Route path="login" element={<Login />} />
+            
+              {/* LAYOUT + PROTECTED ROUTES */}
             <Route path="/*" element={<LayoutIndex />}>
               <Route
                 path="dashboard/*"
