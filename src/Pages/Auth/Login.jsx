@@ -60,7 +60,7 @@ export default function Login() {
           </div>
 
           <form onSubmit={LoginForm.handleSubmit} className="space-y-2">
-            <p className="text-gray-400 text-sm text-center">
+            <p className="text-gray-400 font-semibold text-center">
               Please login to your account
             </p>
 
@@ -71,7 +71,7 @@ export default function Login() {
               onChange={LoginForm.handleChange}
               value={LoginForm.values.email}
               placeholder="Email"
-              className="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lime-600  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-sm sm:leading-6"
               required
             />
 
@@ -82,7 +82,7 @@ export default function Login() {
               onChange={LoginForm.handleChange}
               value={LoginForm.values.password}
               placeholder="Password"
-              className="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lime-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-sm sm:leading-6"
               required
             />
             {loading ? (
@@ -135,18 +135,10 @@ export default function Login() {
 
         {/* Right Section */}
          
-        <div className="hidden md:flex flex-col justify-center w-full md:w-1/2 bg-gradient-to-r from-lime-700 to-gray-500 text-white p-8">
-          <h4 className="text-2xl font-bold mb-4">
-            We are more than just a Book company
-          </h4>
-          <p className="text-sm">
-            Discover a platform that connects book lovers, where buying,
-            selling, and sharing books becomes effortless and enjoyable. Embrace
-            a world of stories, knowledge, and possibilities.
-          </p>
-          {/* <div className="w-full h-96">
+        <div className="hidden  md:flex flex-col w-full md:w-1/2 bg-gradient-to-r from-lime-700 to-black text-white p-16 items-center justify-center">
+          <div className="w-full h-full">
     <LoginGlobe />
-  </div> */}
+  </div>
         </div>
       </div>
     </div>

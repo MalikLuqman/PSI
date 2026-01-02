@@ -62,8 +62,8 @@ const SideNavbar = () => {
     <>
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
         <div className="flex grow flex-col gap-y-4 overflow-y-auto bg-gray-900 px-6 pb-4">
-          <div className="mt-0 p-0  flex">
-            <Link to="/home">
+          <div className="mt-0 p-0 flex justify-center items-center">
+            <Link to="/dashboard">
               <img
                 src={PSI_Logo}
                 alt="PSI Logo"

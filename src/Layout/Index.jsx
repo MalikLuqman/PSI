@@ -193,7 +193,7 @@ export default function LayoutIndex() {
                 </div>
               </PopoverGroup> */}
 
-              <div className="ml-auto flex items-center">
+              <div className="ml-auto flex items-center border-2 border-gray-800 p-1 rounded-md bg-gray-300">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {userLoggedIn && (
                     <Menu as="div" className="relative">
@@ -235,7 +235,7 @@ export default function LayoutIndex() {
                       </MenuButton>
                       <MenuItems
                         transition
-                        className="absolute right-0 z-50 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                        className="absolute right-0 z-50 mt-2.5 w-32 origin-top-right rounded-md bg-gray-300 py-2 shadow-lg ring-1 ring-gray-900/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                       >
                         {userNavigation.map((item) => (
                           <MenuItem key={item.name}>
