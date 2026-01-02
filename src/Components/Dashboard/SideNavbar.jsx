@@ -12,7 +12,7 @@ import {
   ArchiveBoxIcon,
   UserGroupIcon,
 } from "../../utils/icons";
-import BookLogo from "../../../public/logos/BookLogo.png";
+import PSI_Logo from "../../../public/logos/PSI_Logo.png";
 
 const SideNavbar = () => {
   const { id } = useParams();
@@ -27,55 +27,29 @@ const SideNavbar = () => {
       current: true,
     },
     {
-      name: "Books",
-      href: "/dashboard/books",
+      name: "Subscriber Search",
+      href: "/dashboard/subscriber",
       icon: MenuBookOutlinedIcon,
       current: false,
     },
-    ...(role === "1"
-      ? [
           {
-            name: "Books For Sale",
-            href: "/dashboard/books-for-sale",
+            name: "Bulk Lookup",
+            href: "/dashboard/bulk-lookup",
             icon: ShoppingCartOutlinedIcon,
             current: false,
           },
           {
-            name: "Books Subjects",
-            href: "/dashboard/books-subjects",
-            icon: RttOutlinedIcon,
-            current: false,
-          },
-          {
-            name: "All Transactions",
+            name: "Logs",
             href: "/dashboard/all-transactions",
             icon: CurrencyDollarIcon,
             current: false,
           },
-          {
-            name: "Users",
-            href: "/dashboard/users",
-            icon: UserGroupIcon,
-            current: false,
-          },
-        ]
-      : []),
-    ...(role === "2"
-      ? [
-          {
-            name: "Transactions",
-            href: "/dashboard/user-transactions",
-            icon: CurrencyDollarIcon,
-            current: false,
-          },
-        ]
-      : []),
-    {
-      name: "Orders",
-      href: "/dashboard/books-orders",
-      icon: ArchiveBoxIcon,
-      current: false,
-    },
+          // {
+          //   name: "Users",
+          //   href: "/dashboard/users",
+          //   icon: UserGroupIcon,
+          //   current: false,
+          // },   
   ];
 
   useEffect(() => {}, [location.pathname]);
@@ -91,8 +65,8 @@ const SideNavbar = () => {
           <div className="mt-0 p-0  flex">
             <Link to="/home">
               <img
-                src={BookLogo}
-                alt="Book Logo"
+                src={PSI_Logo}
+                alt="PSI Logo"
                 className="h-[6rem] w-auto "
               />
             </Link>
@@ -107,8 +81,8 @@ const SideNavbar = () => {
                         to={item.href}
                         className={classNames(
                           location.pathname === item.href
-                            ? "bg-orange-500 text-white"
-                            : "text-gray-300 hover:bg-orange-500 hover:text-white",
+                            ? "bg-lime-700 text-white"
+                            : "text-gray-300 hover:bg-lime-600 hover:text-white",
                           "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold"
                         )}
                       >
@@ -122,18 +96,6 @@ const SideNavbar = () => {
                   ))}
                 </ul>
               </li>
-              {/* <li className="mt-auto">
-                <a
-                  href="#"
-                  className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-orange-500"
-                >
-                  <Cog6ToothIcon
-                    aria-hidden="true"
-                    className="size-6 shrink-0"
-                  />
-                  Settings
-                </a>
-              </li> */}
             </ul>
           </nav>
         </div>

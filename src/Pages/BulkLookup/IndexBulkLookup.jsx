@@ -14,22 +14,15 @@ import { Button } from "../../Components/common/Button";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Tippy from "@tippyjs/react";
-import AddBooksModal from "../../Components/Books/AddBooksModal";
-import EditBooksModal from "../../Components/Books/EditBooksModal";
-import ViewBooksModal from "../../Components/Books/ViewBooksModal";
-import DeleteBookModal from "../../Components/Books/DeleteBookModal";
 import { Toaster, toast } from "sonner";
 import axiosInstance from "../../api/axiosinstance";
 import Pagination from "../../Components/common/Pagination";
 import TableLoader from "../../Components/common/TableLoader";
-import AddBookImageURLModal from "../../Components/BookImage/AddBookImageURLModal";
-import DispatchConfirmationModal from "../../Components/Dispatch/DispatchConfirmationModal";
-import functions from "../../utils/GlobalFunctions";
 import { useDropdownContext } from "../../DropdownProvider/DropdownProvider";
 import ChangeBookStatusModal from "../../Components/Books/ChangeBookStatusModal";
 import ChangeBookForSaleStatusModal from "../../Components/BookForSale/ChangeBookForSaleStatusModal";
 
-export default function IndexBooksForSale() {
+export default function IndexBulkLookup() {
   const [loadingTable, setLoadingTable] = useState(true);
   const [selectedBookData, setSelectedBookData] = useState();
 

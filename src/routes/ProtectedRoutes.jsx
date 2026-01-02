@@ -1,14 +1,3 @@
-// import { Navigate } from "react-router-dom";
-
-// const ProtectedRoutes = ({ children }) => {
-//   const isLoggedIn = localStorage.getItem("token");
-
-//   if (!isLoggedIn || isLoggedIn === "undefined") {
-//     return <Navigate to="/login" replace />;
-//   }
-//   return children;
-// };
-// export default ProtectedRoutes;
 
 import { Navigate, useLocation, useParams } from "react-router-dom";
 
@@ -18,17 +7,17 @@ const ProtectedRoutes = ({ children }) => {
   const userPermission = {
     "/dashboard/user-transactions": "user_transactions",
     "/dashboard": "view_dashboard",
-    "/dashboard/books": "View_books",
+    "/dashboard/subscriber": "View_subscriber",
     "/dashboard/books-orders": "orders",
     "/dashboard/profile": "profile",
   };
 
   const adminPermission = {
-    "/dashboard/books-for-sale": "books_for_sale",
+    "/dashboard/bulk-lookup": "bulk_lookup",
     "/dashboard/books-subjects": "view_subjects",
     "/dashboard/all-transactions": "view_all_transactions",
     "/dashboard": "view_dashboard",
-    "/dashboard/books": "view_books",
+    "/dashboard/subscriber": "View_subscriber",
     "/dashboard/books-orders": "orders",
     "/dashboard/profile": "profile",
     "/dashboard/users": "users",
@@ -43,12 +32,6 @@ const ProtectedRoutes = ({ children }) => {
     const dynamicPath = `${basePath}/${id}`;
     adminPermission[dynamicPath] = permission;
   };
-
-  // addAdminDynamicRoute(
-  //   "/admin/employees/view-employer",
-  //   id?.id,
-  //   "view_employer_profile"
-  // );
 
   const isLoggedIn = localStorage.getItem("token");
   const location = useLocation();
