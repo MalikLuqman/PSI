@@ -11,6 +11,9 @@ import {
   RttOutlinedIcon,
   ArchiveBoxIcon,
   UserGroupIcon,
+  SearchOutlinedIcon,
+  LocationSearchingOutlinedIcon,
+  AssignmentOutlinedIcon
 } from "../../utils/icons";
 import PSI_Logo from "../../../public/logos/PSI_Logo.png";
 
@@ -29,19 +32,19 @@ const SideNavbar = () => {
     {
       name: "Subscriber Search",
       href: "/dashboard/subscriber",
-      icon: MenuBookOutlinedIcon,
+      icon: SearchOutlinedIcon,
       current: false,
     },
           {
             name: "Bulk Lookup",
             href: "/dashboard/bulk-lookup",
-            icon: ShoppingCartOutlinedIcon,
+            icon: LocationSearchingOutlinedIcon,
             current: false,
           },
           {
             name: "Logs",
             href: "/dashboard/all-transactions",
-            icon: CurrencyDollarIcon,
+            icon: AssignmentOutlinedIcon,
             current: false,
           },
           // {

@@ -175,12 +175,12 @@ export default function IndexProfile() {
                   Personal Information
                 </h2>
                 <p className="mt-1 text-sm/6 text-gray-600">
-                  Use a permanent address where you can receive mail.
+                 Please use correct information.
                 </p>
               </div>
               {!isEditing && (
                 <PencilSquareIcon
-                  className="block h-6 w-6 text-orange-500 hover:text-orange-700"
+                  className="block h-6 w-6 text-lime-600 hover:text-lime-700"
                   aria-hidden="true"
                   onClick={() => toggleEdit()}
                 />
@@ -306,16 +306,17 @@ export default function IndexProfile() {
                       </Button>{" "}
                       <Button
                         type="submit"
-                        color="orange"
+                        color="#4D7C0F"
                         variant="solid"
                         disabled={loadingState}
+                        className={'bg-lime-700 text-white hover:bg-lime-600'}
                       >
                         {loadingState ? (
                           <>
                             Updating
                             <span className="ml-2">
                               <FallingLines
-                                color="#FFF"
+                                color="#4D7C0F"
                                 width="20"
                                 visible={true}
                                 ariaLabel="falling-circles-loading"

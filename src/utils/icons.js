@@ -7,6 +7,14 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ImportContactsOutlinedIcon from "@mui/icons-material/ImportContactsOutlined";
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import RttOutlinedIcon from "@mui/icons-material/RttOutlined";
+import ErrorOutlinedIcon from "@mui/icons-material/ErrorOutlined";
+import SendIcon from "@mui/icons-material/Send";
+import PinDropOutlinedIcon from "@mui/icons-material/PinDropOutlined";
+import LocationSearchingOutlinedIcon from '@mui/icons-material/LocationSearchingOutlined';
+import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 
 //hero icons
 import {
@@ -46,11 +54,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import RttOutlinedIcon from "@mui/icons-material/RttOutlined";
-import ErrorOutlinedIcon from "@mui/icons-material/ErrorOutlined";
-import SendIcon from "@mui/icons-material/Send";
-import PinDropOutlinedIcon from "@mui/icons-material/PinDropOutlined";
+
 
 export {
   Bars3Icon,
@@ -102,4 +106,7 @@ export {
   ArrowsRightLeftIcon,
   PinDropOutlinedIcon,
   UserGroupIcon,
+  SearchOutlinedIcon,
+  LocationSearchingOutlinedIcon,
+  AssignmentOutlinedIcon
 };

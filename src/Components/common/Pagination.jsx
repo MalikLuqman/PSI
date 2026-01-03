@@ -38,7 +38,7 @@ export default function Pagination({ page, count }) {
             aria-current={i === currentPage ? "page" : null}
             className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
               i === currentPage
-                ? "z-10 bg-orange-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                ? "z-10 bg-lime-700 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
                 : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
             }`}
           >
@@ -58,7 +58,7 @@ export default function Pagination({ page, count }) {
             aria-current={i === currentPage ? "page" : null}
             className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
               i === currentPage
-                ? "z-10 bg-orange-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                ? "z-10 bg-lime-700 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
                 : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
             }`}
           >
@@ -83,7 +83,7 @@ export default function Pagination({ page, count }) {
             aria-current={currentPage === currentPage ? "page" : null}
             className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
               currentPage === currentPage
-                ? "z-10 bg-orange-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                ? "z-10 bg-lime-700 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
                 : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
             }`}
           >
@@ -109,7 +109,7 @@ export default function Pagination({ page, count }) {
             aria-current={i === currentPage ? "page" : null}
             className={`relative inline-flex items-center px-4 py-2 text-sm font-semibold ${
               i === currentPage
-                ? "z-10 bg-orange-500 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                ? "z-10 bg-lime-700 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
                 : "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
             }`}
           >
