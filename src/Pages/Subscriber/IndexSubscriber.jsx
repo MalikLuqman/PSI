@@ -155,14 +155,15 @@ export default function IndexSubscriber() {
                 <div className="mt-2">
                   <Button
                     variant="solid"
-                    color="orange"
+                      color="#4D7C0F"
+                    className={'text-white bg-lime-700 hover:bg-lime-600'}
                     onClick={openAddBookModalHandler}
                   >
                     <PlusCircleIcon
                       className="-ml-0.5 h-5 w-5 mr-1"
                       aria-hidden="true"
                     />
-                    Add Books
+                    Add File
                   </Button>
                 </div>
               </div>

@@ -241,7 +241,7 @@ export default function LayoutIndex() {
                           <MenuItem key={item.name}>
                             <Link
                               to={item.href}
-                              className="block px-3 py-1 text-sm/6 text-gray-900 hover:text-lime-700  data-[focus]:bg-gray-50 data-[focus]:outline-none"
+                              className="flex justify-center items-center w-full px-3 py-1  text-sm/6 font-semibold text-gray-900 hover:text-lime-600 "
                             >
                               {item.name}
                             </Link>
@@ -249,14 +249,14 @@ export default function LayoutIndex() {
                         ))}
                         <div className="m-1.5">
                           <Button
-                            // color="green"
-                            className={"rounded-xl w-full bg-lime-700 hover:bg-lime-600"}
+                            color="#4D7C0F"
+                            className={"rounded-xl w-full text-white bg-lime-700 hover:bg-lime-600"}
                             onClick={async () => {
                               await auth.logout();
                               navigate("/login");
                             }}
                           >
-                            sign out
+                            Sign out
                           </Button>
                         </div>
                       </MenuItems>

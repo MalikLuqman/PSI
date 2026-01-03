@@ -80,7 +80,7 @@ const Header = () => {
             ))}
             <div className="m-1.5">
               <Button
-                color="green"
+                 color="#4D7C0F"
                 className={"rounded-xl w-full bg-lime-700 hover:bg-lime-600"}
                 onClick={async () => {
                   await auth.logout();
